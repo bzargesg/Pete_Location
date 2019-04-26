@@ -13,10 +13,15 @@ router.get('/restaurants/:hotelName', (req, res) => {
   const { hotelName } = req.params;
   client.get(`rest:${hotelName}`, (err, restaurants) => {
     if (!restaurants) {
-      db.attractions.getAttractions(hotelName, 'restaurant').then((restaurantsInRange) => {
-        client.set(`rest:${hotelName}`, JSON.stringify(restaurantsInRange));
-        res.json(restaurantsInRange);
-      });
+      db.attractions
+        .getAttractions(hotelName, 'restaurant')
+        .then((restaurantsInRange) => {
+          client.set(`rest:${hotelName}`, JSON.stringify(restaurantsInRange));
+          res.json(restaurantsInRange);
+        })
+        .catch((err) => {
+          console.log('fail restaurants route: ');
+        });
     } else {
       res.json(JSON.parse(restaurants));
     }
@@ -26,10 +31,15 @@ router.get('/attractions/:hotelName', (req, res) => {
   const { hotelName } = req.params;
   client.get(`attr:${hotelName}`, (err, attractions) => {
     if (!attractions) {
-      db.attractions.getAttractions(hotelName, 'attraction').then((restaurantsInRange) => {
-        client.set(`attr:${hotelName}`, JSON.stringify(restaurantsInRange));
-        res.json(restaurantsInRange);
-      });
+      db.attractions
+        .getAttractions(hotelName, 'attraction')
+        .then((restaurantsInRange) => {
+          client.set(`attr:${hotelName}`, JSON.stringify(restaurantsInRange));
+          res.json(restaurantsInRange);
+        })
+        .catch((err) => {
+          console.log('fail restaurants route: ');
+        });
     } else {
       res.json(JSON.parse(attractions));
     }
@@ -43,17 +53,3 @@ router.get('/hotels/:hotelName', (req, res) => {
 // router.get('/initialize', controller.distanceMatrix.initialize);
 
 module.exports = router;
-// const { hotelName } = req.params;
-// client.get(hotelName, (err, restaurants) => {
-//   if (restaurants) {
-//     console.log('got rest', restaurants);
-//     res.json(JSON.parse(restaurants));
-//   } else {
-//     db.attractions.getAttractions(hotelName, 'restaurants').then((restaurantsInRange) => {
-//       console.log('did not get rest', restaurantsInRange);
-
-//       // client.set(hotelName, JSON.stringify(restaurantsInRange));
-//       res.json(restaurantsInRange);
-//     });
-//   }
-// });

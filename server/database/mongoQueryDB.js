@@ -1,10 +1,5 @@
-const url = 'localhost:27017/rickadvisor-location';
-const db = require('monk')(url, {
-  poolSize: 10,
-});
+const { hotels, attractions } = require('./DBconfig.js');
 
-const hotels = db.get('hotels');
-const attractions = db.get('attractions');
 let dbcount = 0;
 
 const getRelativeDistance = (latitude, longitude) => {
