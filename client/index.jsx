@@ -32,14 +32,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('location/attractions/McGlynn, Berge and Harris')
+    fetch('location/attractions/Zieme Inc')
       .then(response => response.json())
       .then((data) => {
         this.setState({
           attractions: data,
         });
       });
-    fetch('location/restaurants/McGlynn, Berge and Harris')
+    fetch('location/restaurants/Zieme Inc')
       .then(response => response.json())
       .then((data) => {
         this.setState({
@@ -47,7 +47,7 @@ class App extends React.Component {
         });
         // console.log('restaurants', this.state.restaurants);
       });
-    fetch('location/hotels/McGlynn, Berge and Harris')
+    fetch('location/hotels/Zieme Inc')
       .then(response => response.json())
       .then((data) => {
         this.setState({

@@ -1,4 +1,4 @@
-const url = 'localhost:27017/rickadvisor-location';
+const url = 'mongodb://database/rickadvisor-location';
 const db = require('monk')(url, {
   poolSize: 20,
   bufferMaxEntries: 10000,

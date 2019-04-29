@@ -1,7 +1,7 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
-const url = 'localhost:27017/rickadvisor-location';
+const url = 'mongodb://database/rickadvisor-location';
 const db = require('monk')(url);
 
 const bulkWriteHandler = async (fileName, dbName) => {
@@ -42,4 +42,5 @@ const bulkWriteHandler = async (fileName, dbName) => {
   const attr = db.get('attractions');
   await attr.createIndex({ latitude: 1, longitude: 1 });
   db.close();
+  console.log('finished writing');
 })();

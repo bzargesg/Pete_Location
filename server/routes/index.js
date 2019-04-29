@@ -2,7 +2,8 @@ const router = require('express').Router();
 const redis = require('redis');
 const db = require('../database/mongoQueryDB');
 
-const client = redis.createClient();
+const client = redis.createClient('6379', 'redis');
+// const client = redis.createClient();
 client.on('connect', () => {
   console.log('Redis client connected');
 });
@@ -48,8 +49,5 @@ router.get('/attractions/:hotelName', (req, res) => {
 router.get('/hotels/:hotelName', (req, res) => {
   db.hotels.getHotelByName(req.params.hotelName).then(hotel => res.json(hotel));
 });
-// router.get('/distanceMatrix', controller.distanceMatrix.update);
-// router.get('/geocode', controller.distanceMatrix.geocode);
-// router.get('/initialize', controller.distanceMatrix.initialize);
 
 module.exports = router;

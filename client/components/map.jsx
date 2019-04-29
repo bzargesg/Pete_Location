@@ -6,10 +6,10 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/location/restaurants/McGlynn, Berge and Harris')
+    fetch('/location/restaurants/Zieme Inc')
       .then(response => response.json())
       .then((restaurants) => {
-        fetch('/location/attractions/McGlynn, Berge and Harris')
+        fetch('/location/attractions/Zieme Inc')
           .then(response => response.json())
           .then((attractions) => {
             this.updateMap(restaurants, attractions);
@@ -22,9 +22,9 @@ class Map extends React.Component {
     const locations = [];
     restaurants.forEach((restaurant) => {
       const restaurantLatLong = [
-        restaurant.Name,
-        restaurant.Latitude,
-        restaurant.Longitude,
+        restaurant.name,
+        restaurant.latitude,
+        restaurant.longitude,
         'Restaurant',
       ];
 
@@ -32,15 +32,15 @@ class Map extends React.Component {
     });
     attractions.forEach((attraction) => {
       const restaurantLatLong = [
-        attraction.Name,
-        attraction.Latitude,
-        attraction.Longitude,
+        attraction.name,
+        attraction.latitude,
+        attraction.longitude,
         'Attraction',
       ];
 
       locations.push(restaurantLatLong);
     });
-
+    console.log(locations);
     const map = new window.google.maps.Map(document.getElementById('map'), {
       center: { lat: 40.3772, lng: -105.52 },
       zoom: 14,
