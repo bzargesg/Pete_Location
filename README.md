@@ -1,57 +1,41 @@
-Fetch locations:
--map.jsx-componentdidmount: call name/latitude/longitude/Restaurant or Attraction
--'/location/restaurants'
--'/location/attractions'
--index.jsx: hotels arr restaurants arr and attractions arr
--'location/attractions'
--'location/restaurants'
--'location/hotels'
-Routes:
-GET:
-'/restaurants'- array of restaurant objects
-[{Name: string,
-NumberOfReviews: INT ,
-ReviewScore: DECIMAL(1,1) ,
-Addr1: string,
-Addr2: string,
-City: string ,
-State: string ,
-PostalCode: INT ,
-DistanceFromHotel: DECIMAL(3,1) ,
-Latitude: Decimal(5,6) ,
-Longitude: Decimal(5,6) ,
-}]
-'/attractions' - array of attraction objects
-[{
-Name: string,
-NumberOfReviews: INT ,
-ReviewScore: DECIMAL(1,1) ,
-Addr1: string,
-Addr2: string,
-City: string ,
-State: string ,
-PostalCode: INT ,
-DistanceFromHotel: DECIMAL(3,1) ,
-Latitude: Decimal(5,6) ,
-Longitude: Decimal(5,6) ,
-}]
-'/hotels' - Specific hotel by ID---keep
-{
-WalkableScore: INT ,
-Addr1: string,
-Addr2: string,
-City: string ,
-State: string ,
-PostalCode: INT ,
-Latitude: Decimal(5,5) ,
-Longitude: Decimal(5,5) ,
-NearestAirport: string ,
-NearestAirportDistance: INT ,
-}
-PUT:
-'/distanceMatrix' - updates a hotels distance to a restaurant
-Update hotel dist to restaurant
-'/geocode' - sets lattitute and longitude of an attraction
-Set lat and long of attraction
-'/initialize' - doesnt do anything
-Does nothing
+# Rick-advisor Locations
+
+Cloned the look and feel of trip-advisor in a microservices architecture, . Took legacy code from another group and enhanced to withstand a 1000 request per second artillery http endpoint testing.
+
+## Example
+
+
+
+## Getting Started
+
+Run npm install and add a DBconfig.js file that connects to a mongo database that exports the database, and access to two collections named hotels and attractions.
+
+### Prerequisites
+
+running Node.js and have a MongoDB database with two collections hotels and attractions
+
+### Installing
+
+Run npm install
+
+## Built With
+
+* [React.js](https://reactjs.org/) - The web framework used
+* [MongoDB](https://www.mongodb.com/) - Database
+* [Node.js](https://nodejs.org/en/) - Used to generate RSS Feeds
+
+
+## Authors
+
+* **Pete Knutson** - *Initial work* - (https://github.com/rickadviser/Pete_Location)
+
+## License
+
+This project is licensed under the MIT License
+
+## Acknowledgments
+
+* Trip-advisor
+* Pete Knutson
+* Hack Reactor
+* Galvanize
