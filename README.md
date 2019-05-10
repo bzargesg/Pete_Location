@@ -20,9 +20,11 @@ Run npm install
 
 ## Built With
 
-* [React.js](https://reactjs.org/) - The web framework used
+* [React.js](https://reactjs.org/) - UI library
 * [MongoDB](https://www.mongodb.com/) - Database
-* [Node.js](https://nodejs.org/en/) - Used to generate RSS Feeds
+* [Node.js](https://nodejs.org/en/) - Server environment
+* [Express](https://expressjs.com/) - Web application framework
+* [Monk](https://automattic.github.io/monk/) - Usability framework for MongoDB
 
 
 ## Authors
