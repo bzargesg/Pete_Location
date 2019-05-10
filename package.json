@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "seed": "mysql -u root < server/database/locations_setup.sql"
+    "redis": "redis-server /usr/local/etc/redis.conf",
+    "seed": "node server/database/db/MongoMonk/seedMongo.js",
+    "seed_mongo": "seedMongo.sh"
   },
   "keywords": [],
   "author": "",
@@ -16,19 +18,32 @@
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
     "@google/maps": "^0.5.5",
+    "artillery": "^1.6.0-27",
     "babel-loader": "^8.0.5",
+    "compression": "^1.7.4",
+    "connect-timeout": "^1.9.0",
     "cors": "^2.8.5",
     "css-loader": "^2.1.1",
+    "csv-parser": "^2.2.0",
     "execsql": "0.0.3",
     "express": "^4.16.4",
+    "express-queue": "0.0.12",
     "extract-text-webpack-plugin": "^3.0.2",
+    "faker": "^4.1.0",
+    "knex": "^0.16.5",
+    "knex-csv-seeder": "^0.4.1",
+    "monk": "^6.0.6",
     "mysql": "^2.16.0",
-    "nodemon": "^1.18.10",
+    "newrelic": "^5.7.0",
+    "nodemon": "^1.18.11",
+    "pg": "^7.10.0",
+    "pg-copy-streams": "^2.2.0",
+    "pg-query-stream": "^2.0.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "redis": "^2.8.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
   },
   "devDependencies": {
@@ -41,7 +56,8 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "jest": "^24.5.0"
+    "jest": "^24.5.0",
+    "webpack-cli": "^3.3.1"
   },
   "jest": {
     "snapshotSerializers": [
