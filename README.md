@@ -3,10 +3,10 @@
 Cloned the look and feel of trip-advisor in a microservices architecture, . Took legacy code from another group and enhanced to withstand a 1000 request per second artillery http endpoint testing.
 
 ## Example
-![Top of Page](bzargesg.github.com/repository/rickAdvisor/TopPage.png)
-![Middle of Page](bzargesg.github.com/repository/rickAdvisor/MiddlePage.png)
-![Map Element](bzargesg.github.com/repository/rickAdvisor/MapElement.png)
-![Review Element](bzargesg.github.com/repository/rickAdvisor/ReviewElement.png)
+![Top of Page](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/TopPage.png)\
+![Middle of Page](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/MiddlePage.png)\
+![Map Element](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/MapElement.png)\
+![Review Element](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/ReviewElement.png)
 
 ## Getting Started
 
