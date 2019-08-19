@@ -4,9 +4,9 @@ Cloned the look and feel of trip-advisor in a microservices architecture, . Took
 
 ## Example
 ![Top of Page](https://bzargesg.github.io/rickAdvisor/TopPage.png)\
-![Middle of Page](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/MiddlePage.png)\
-![Map Element](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/MapElement.png)\
-![Review Element](bzargesg.github.com/repository/bzargesg.github.io/rickAdvisor/ReviewElement.png)
+![Middle of Page](https://bzargesg.github.io/rickAdvisor/MiddlePage.png)\
+![Map Element](https://bzargesg.github.io/rickAdvisor/MapElement.png)\
+![Review Element](https://bzargesg.github.io/rickAdvisor/ReviewElement.png)
 
 ## Getting Started
 
